@@ -1,0 +1,15 @@
+type City {
+    id: ID!
+    name: String!
+}
+
+type Employee {
+    id: ID!
+    names: String!
+    city: City!
+}
+
+# The Root Query for the application
+type Query {
+    findEmployeeById(id: ID!) : Employee
+}

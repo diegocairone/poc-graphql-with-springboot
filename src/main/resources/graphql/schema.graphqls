@@ -9,7 +9,16 @@ type Employee {
     city: City!
 }
 
+input EmployeeInput {
+    names: String!
+    cityId: Int!
+}
+
 # The Root Query for the application
 type Query {
     findEmployeeById(id: ID!) : Employee
+}
+
+type Mutation {
+    createEmployee(input: EmployeeInput!): Employee!
 }
